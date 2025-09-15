@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
+  <title>My Portfolio | About</title>
+
+  <!-- ===== CSS ===== -->
+  <style>
+    /* ===== Reset Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    /* ===== Navigation ===== */
+    header {
+      background: #222;
+      padding: 1rem;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    .nav-links li {
+      margin: 0 1rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00adb5;
+    }
+
+    /* ===== About Section ===== */
+    .about {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .about h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00adb5;
+    }
+    .about p {
+      margin-bottom: 1rem;
+    }
+    .fun-facts {
+      margin-top: 2rem;
+      text-align: left;
+    }
+    .fun-facts h2 {
+      margin-bottom: 0.5rem;
+      color: #393e46;
+    }
+    .fun-facts ul {
+      list-style: disc inside;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header with Navigation ===== -->
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="skills.html">Skills & Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== About Section ===== -->
+  <section class="about">
+    <!-- Profile Image -->
+    <img src="https://via.placeholder.com/150" alt="Your Name">
+
+    <!-- Intro -->
+    <h1>About Me</h1>
+    <p>Hello! My name is Jazmin Johnson. I am passionate about student development and web development.</p>
+    <p>I enjoy creating projects that combine creativity and technology to solve real-world problems. When I’m not coding, you’ll probably find me in Barnes & Noble looking for my next book.</p>
+
+    <!-- Fun Facts -->
+    <div class="fun-facts">
+      <h2>Fun Facts</h2>
+      <ul>
+        <li>My favorite color is purple but I barely own any purple clothes</li>
+        <li>My favorite programming language is HTML</li>
+        <li>I once built a project that allowed for accurate matching of scholarships to unique users.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 [Your Name]. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    // Highlight the current nav link automatically
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(".nav-links a");
+      links.forEach(link => {
+        if (link.href === window.location.href) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

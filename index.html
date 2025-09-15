@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
+  <title>My Portfolio | Home</title>
+
+  <!-- ===== Internal CSS (instead of external file) ===== -->
+  <style>
+    /* ===== Reset Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===== General Page Styles ===== */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    /* ===== Navigation Bar ===== */
+    header {
+      background: #222;
+      padding: 1rem;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    .nav-links li {
+      margin: 0 1rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00adb5;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #00adb5, #393e46);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #00adb5;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #eee;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header with Navigation ===== -->
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <!-- Navigation links -->
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills & Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <h1>Hi, I’m Jazmin Johnson</h1>
+    <p>Welcome to my portfolio! I’m a Student Affairs Professional and Emerging Software Engineer.</p>
+    <a href="skills.html" class="btn">View My Work</a>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 [Your Name]. All Rights Reserved.</p>
+  </footer>
+
+  <!-- =====  JavaScript ===== -->
+  <script>
+    // Wait until page is fully loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      // Highlight active nav link
+      const links = document.querySelectorAll(".nav-links a");
+      links.forEach(link => {
+        if (link.href === window.location.href) {
+          link.classList.add("active");
+        }
+      });
+
+      // Example: Show welcome message (you can remove if not needed)
+      alert("Hello! Welcome to my portfolio homepage!");
+    });
+  </script>
+</body>
+</html>

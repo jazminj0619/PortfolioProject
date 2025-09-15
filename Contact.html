@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
+  <title>My Portfolio | Contact</title>
+
+  <!-- ===== CSS ===== -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #222;
+      padding: 1rem;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    .nav-links li {
+      margin: 0 1rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00adb5;
+    }
+
+    .contact {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .contact h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #00adb5;
+    }
+    .contact p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      margin-bottom: 1.5rem;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .btn {
+      display: inline-block;
+      background: #00adb5;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #007c82;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header with Navigation ===== -->
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills & Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact">
+    <h1>Contact Me</h1>
+    <p>Have a question or want to work together? Fill out the form below!</p>
+
+    <!-- Fake form for now (does not send messages yet) -->
+    <form id="contactForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Jazmin Johnson. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    // Highlight current nav link
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(".nav-links a");
+      links.forEach(link => {
+        if (link.href === window.location.href) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Fake form handler for now
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent actual submission
+      alert("📨 Thank you! Your message has been received (not really sent yet 😉).");
+      this.reset(); // clear form
+    });
+  </script>
+</body>
+</html>
